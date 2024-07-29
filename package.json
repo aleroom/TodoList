@@ -2,10 +2,10 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "",
-  "source": "src/index.html",
+  
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel ./src/index.html --no-cache",
+    "build:parcel": "parcel build ./src/index.html --no-cache"
   },
   "author": "",
   "license": "ISC",

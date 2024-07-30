@@ -1,0 +1,26 @@
+body{
+    height: 100vh;
+    background-color: rgb(251, 243, 231);
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.wrap {
+    width: 300px;
+    margin: auto;
+
+}
+#input {
+    width: 70%;
+}
+#btn {
+    width: 20%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#result {
+    margin-bottom: 50px;
+}
+

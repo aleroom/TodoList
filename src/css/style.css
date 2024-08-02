@@ -11,6 +11,7 @@ body{
 }
 #input {
     width: 70%;
+    
 }
 #btn {
     width: 20%;
@@ -24,3 +25,39 @@ ul{
     margin-bottom: 50px;
 }
 
+.li {
+    padding: 4px 8px;
+    background-color:rgb(250, 235, 213);
+    border: 1px solid brown;
+    margin: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    width: 100%;text-transform: capitalize;
+}
+
+.li-active {
+    color:beige;
+    text-decoration: line-through;   
+    background-color:black;
+     
+}
+
+.li-active.btn {
+    color:rgb(157, 149, 137);
+    text-decoration: line-through;
+    background-color:rgb(114, 108, 99)
+}
+
+.btn {
+    background-color:chocolate;
+    border: none;
+    color:aliceblue;
+    margin-left: 15px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+
+}

@@ -15,7 +15,6 @@ btn.addEventListener('click', (e) => {
 
 function createDeleteElements(value) {
     i++ 
-
     const li = document.createElement('li')
     const btn = document.createElement('button')
 

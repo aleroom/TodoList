@@ -35,33 +35,34 @@ ul{
 
 .li {
     padding: 4px 8px;
-    background-color:rgb(250, 235, 213);
-    border: 1px solid brown;
-    margin: 10px 0;
+    background-color:rgb(215, 196, 165);
+    border: 1px solid rgb(255, 236, 236);
+    margin: 10px;
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 5;
-    width: 100%;text-transform: capitalize;
+    /* z-index: 5; */
+    width: 80%;
+    text-transform: capitalize;
 }
 
 .li-active {
     color:beige;
     text-decoration: line-through;   
-    background-color:black;
+    background-color:rgb(0, 0, 0);
      
 }
 
 .li-active.btn {
-    color:rgb(157, 149, 137);
+    color:rgb(240, 227, 207);
     text-decoration: line-through;
-    background-color:rgb(114, 108, 99)
+    background-color:rgb(248, 222, 180)
 }
 
 .btn {
-    background-color:chocolate;
+    background-color:rgb(148, 99, 64);
     border: none;
-    color:aliceblue;
+    color:rgb(255, 255, 255);
     margin-left: 15px;
     padding: 10px;
     cursor: pointer;
@@ -69,7 +70,23 @@ ul{
     z-index: 10;
 
 }
+.boards {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 5%;
+}
 
-.upcoming {
+.upcoming, .inprogress, .done {
     width: 300px;
+    
+    background-color:rgb(232, 219, 192, 0.4);
+}
+.labelName {
+    font-size: 25px;
+    display: block;
+    text-align: center;
 }

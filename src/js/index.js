@@ -17,13 +17,14 @@ function createDeleteElements(value) {
     i++ 
     const li = document.createElement('li')
     const btn = document.createElement('button')
+    
 
     li.className = 'li';
     li.textContent = value;
 
     
     btn.className = 'btn';
-    btn.textContent = "add";
+    btn.textContent = "X";
     li.appendChild(btn)
 
     //remove todo

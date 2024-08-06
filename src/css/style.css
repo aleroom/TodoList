@@ -46,12 +46,7 @@ ul{
     text-transform: capitalize;
 }
 
-.li-active {
-    color:beige;
-    text-decoration: line-through;   
-    background-color:rgb(0, 0, 0);
-     
-}
+
 
 .li-active.btn {
     color:rgb(240, 227, 207);

@@ -1,28 +1,61 @@
-
 const input = document.querySelector('#input');
 const btn = document.querySelector('#btn');
 const result = document.querySelector('#result');
 const total = document.querySelector('#total');
 let i = 0;
 
-
+let todoArray = []; 
 btn.addEventListener('click', (e) => {
-    if(input.value === '') return
-    createDeleteElements(input.value)
+    todoArray.push(input.value)
+    console.log(todoArray)
+    // if(input.value === '') return
+    // createDeleteElements(input.value)
     input.value = ''
 })
 
-
-function createDeleteElements(value) {
-    i++ 
-    const li = document.createElement('li');
-    const btn = document.createElement('button');
-    li.className = 'li';
-    li.textContent = value;
+const addToJson = () => {
+    JSON.stringify(localStorage.setItem('data', todoArray));
     
-    btn.className = 'btn';
-    btn.textContent = "X";
-    li.appendChild(btn);
+} 
+btn.addEventListener('click', addToJson);
+
+const getData = () => {
+    // let dataFrom = JSON.parse(localStorage.getItem('data'));
+    let from = localStorage.getItem('data');
+    let dataFrom = JSON.parse(from);
+    if(dataFrom) {
+        sortItem(dataFrom)
+    } else {
+        result.innerHTML = " ";
+    }
+}
+
+
+
+const sortItem = (dataFrom) => {
+    dataFrom.forEach((e) => {
+        result.textContent += `${e} `;
+    })
+}
+
+
+btn.addEventListener('click', getData)
+
+const removeData = () => {
+    localStorage.removeItem('data');
+    getData();
+}
+
+// function createDeleteElements(value) {
+//     i++ 
+//     const li = document.createElement('li');
+//     const btn = document.createElement('button');
+//     li.className = 'li';
+//     li.textContent = value;
+    
+//     btn.className = 'btn';
+//     btn.textContent = "X";
+//     li.appendChild(btn);
   
 
     //remove todo
@@ -40,4 +73,7 @@ function createDeleteElements(value) {
     total.textContent = i
     result.appendChild(li)
 
-}
+  
+
+
+

@@ -7,34 +7,52 @@ let i = 0;
 let todoArray = []; 
 btn.addEventListener('click', (e) => {
     todoArray.push(input.value)
-    console.log(todoArray)
-    // if(input.value === '') return
-    // createDeleteElements(input.value)
-    input.value = ''
+    console.log(todoArray) 
+    if(input.value === '') return
+    createDeleteElements(input.value)
+    
 })
 
+function createDeleteElements(value) {
+    i++ 
+    const li = document.createElement('li');
+    const btnX = document.createElement('button');
+    li.className = 'li';
+    li.textContent = value;
+    
+    btnX.className = 'btn';
+    btnX.textContent = "X";
+    li.appendChild(btnX);
+    result.appendChild(li)
+}
+
+
+
+
 const addToJson = () => {
-    JSON.stringify(localStorage.setItem('data', todoArray));
+    let str = JSON.stringify(todoArray);
+    localStorage.setItem('data', str);
     
 } 
 btn.addEventListener('click', addToJson);
 
+
+
 const getData = () => {
-    // let dataFrom = JSON.parse(localStorage.getItem('data'));
     let from = localStorage.getItem('data');
     let dataFrom = JSON.parse(from);
     if(dataFrom) {
         sortItem(dataFrom)
     } else {
-        result.innerHTML = " ";
+        li.innerHTML = " ";
     }
 }
 
-
+    
 
 const sortItem = (dataFrom) => {
     dataFrom.forEach((e) => {
-        result.textContent += `${e} `;
+        li.textContent += `${e} `;
     })
 }
 
@@ -46,17 +64,6 @@ const removeData = () => {
     getData();
 }
 
-// function createDeleteElements(value) {
-//     i++ 
-//     const li = document.createElement('li');
-//     const btn = document.createElement('button');
-//     li.className = 'li';
-//     li.textContent = value;
-    
-//     btn.className = 'btn';
-//     btn.textContent = "X";
-//     li.appendChild(btn);
-  
 
     //remove todo
     btn.addEventListener('click', (e) => {

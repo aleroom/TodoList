@@ -4,6 +4,18 @@ body{
     margin: 0 auto;
     padding-top: 100px;
 }
+.btnStart {
+    padding: 10px 20px;
+    background-color: rgb(149, 99, 64);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    align-items: center;
+    margin: 0 auto;
+    display: block;
+}
 .title {
     margin: auto;
     text-align: center;
@@ -15,6 +27,7 @@ body{
     margin: auto;
 
 }
+
 #input {
     width: 70%;
     

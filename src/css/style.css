@@ -71,18 +71,43 @@ ul{
 .taskBoard  {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
     text-align: center;
+    justify-content: space-between;
+    
 
 }
 
+.titleBoard {
+   
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 25px;
+    background-color:#a5a56c;
+    padding: 2px;
+}
+
 .todoBoard, .doingBoard, .doneBoard {
-    font-size: 20px;
-    color: rgb(149, 99, 64);
     width: 30%;
-    border: 1px solid rgb(255, 236, 236);
-    margin-right: 30px;
+   
+}
+
+.todoItem {
+    margin-top: 20px;
+    background-color: #bca898;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px; 
+    
+    
+}
+.todoItem p {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #7f5822;
+    font-weight: bold;
 }
 
 

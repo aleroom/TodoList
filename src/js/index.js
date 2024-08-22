@@ -1,4 +1,5 @@
 import "./modal.js";
+import "./taskBoard.js";
 // import { todoArray } from "./arrays.js";
 // import { doingArray } from "./arrays.js";
 // import { doneArray } from "./arrays.js";
@@ -22,12 +23,15 @@ import "./modal.js";
 //     todoArr.push(task);
 //     clearInputFields();
 // }); 
-const input = document.querySelector('#input');
-const btn = document.querySelector('#btn');
-const result = document.querySelector('#result');
-const total = document.querySelector('#total');
-const button = document.querySelector('.button');
-let i = 0;
+// const input = document.querySelector('#input');
+// const btn = document.querySelector('#btn');
+// const result = document.querySelector('#result');
+// const total = document.querySelector('#total');
+// const button = document.querySelector('.button');
+// let i = 0;
+
+
+
 
 let todoArray = []; 
 button.addEventListener('click', (e) => {

@@ -20,14 +20,14 @@
     <div class="modal-content">
       <span class="close-button">&times;</span>
       <h2> complete the data</h2>
-          <form>
+          <form class="todoForm">
             <label for="name">Task name:</label>
             <input type="text" id="name" name="name"><br><br>
             <label for="name">Developer:</label>
             <input type="text" id="dev" name="dev"><br><br>
             <label for="deadline">Deadline:</label>
             <input type="date" id="start" name="trip-start"  min="2018-01-01" max="2041-12-31" /><br><br>
-            <input type="submit" value="Send">
+            <input type="submit" id="submit" value="Send">
           </form>
     </div>
   </div>
@@ -36,20 +36,26 @@
     <div class="container">
         <div  class="taskBoard">
             <div class="todoBoard">
-                <h4>ToDo</h4>
-                <div>
+                <div class="titleBoard">
+                    <h4>ToDo</h4>
+                </div>
+                <div class="taskList">
                     
                 </div>
             </div>
             <div class="doingBoard">
-                <h4>Doing</h4>
+                <div class="titleBoard">
+                    <h4>Doing</h4>
+                </div>
                 <div>
                         
                 </div>
                 
             </div>
             <div class="doneBoard">
-                <h4>Done</h4>
+                <div class="titleBoard">
+                    <h4>Done</h4>
+                </div>
                 <div>
                         
                 </div>
